@@ -1,0 +1,54 @@
+<p>test works!</p>
+
+
+<!-- twoway binding -->
+<input [(ngModel)]="name" type="text">
+<h2>{{ name }}</h2>
+
+
+<!-- structural directives -->
+<!-- ngifif directive -->
+<h2 *ngIf="true">hello test(ng if directive)</h2> 
+<!-- else -->
+<h3 *ngIf="displayname; else elseblock"></h3>
+<ng-template #elseblock>
+    <h2>elseblock passed</h2>
+</ng-template>
+<!-- then and else -->
+<h3 *ngIf="NameDisplay; then thenblock; else elseblock"></h3>
+<ng-template #thenblock>
+    <h2>then block</h2>
+</ng-template>
+<ng-template #elseblock>
+    <h2>elseblock passed</h2>
+</ng-template>
+
+<!-- ngswitch directive -->
+
+<div [ngSwitch]="color">
+<h2 *ngSwitchCase="'red'">selected color red</h2>
+<h2 *ngSwitchCase="'green'">selected color green</h2>
+<h2 *ngSwitchCase="'orange'">selected color orange</h2>
+<h2 *ngDefaultControl>selected color</h2>
+</div>
+
+
+<!-- ngfordirective -->
+
+<ul>
+    <li *ngFor="let colors of colorArr ; index as i" >
+        <!-- odd as o  
+              even as e
+              first as f
+              last as l  
+        -->
+      {{ i }}  {{ colors }}
+    </li>
+</ul>
+
+
+
+
+
+
+

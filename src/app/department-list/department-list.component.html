@@ -1,0 +1,13 @@
+<p>department-list works!</p>
+
+
+
+<table border="2">
+    <tr (click)="onSelect(department)"  [class.selected]="isSelected(department)" *ngFor="let department of departments">
+        <td>{{ department.id }}</td>
+        <td>{{ department.name }}</td>
+    </tr>
+</table>
+
+
+
