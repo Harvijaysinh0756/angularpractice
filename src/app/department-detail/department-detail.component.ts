@@ -11,7 +11,7 @@ import { ActivatedRoute , ParamMap, Router} from '@angular/router';
     <a (click)='goPrevoius()'>prevoius</a>
     <a (click)="goNext()">Next</a>
 
- 
+
     <br>
     <p>
       <button (click)="overview()">overview</button>
